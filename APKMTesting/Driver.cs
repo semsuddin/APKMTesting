@@ -6,7 +6,7 @@ using OpenQA.Selenium.Support.UI;
 
 namespace APKMFrame
 {
-    public class Driver
+    public static class Driver
     {
         public static IWebDriver Instance { get; set; }
         
@@ -22,6 +22,4 @@ namespace APKMFrame
             Instance.Quit();
         }
     }
-
-   
 }
