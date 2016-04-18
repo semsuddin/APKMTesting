@@ -15,7 +15,7 @@ namespace TestAPKM
         [SetUp]
         public void InitializeDriver()
         {
-            Driver.Initialize();
+            Driver.InitializeRemote();
         }
 
         [TestCase()]

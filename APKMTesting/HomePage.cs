@@ -8,8 +8,8 @@ namespace APKMFrame
 {
     public class HomePage : Pages
     {
-        public override string Address { get; } = "http://ams.authoritypartners.com:44303/";
+        protected override string Address { get; } = "http://ams.authoritypartners.com:44303/";
 
-        public override string Title { get; } = "API Management System";
+        protected override string Title { get; } = "API Management System";
     }
 }

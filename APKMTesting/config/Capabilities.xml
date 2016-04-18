@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Capabilities>
+  <Name>CBTesting</Name>
+  <Build>0.1</Build>
+  <Browser_api_name>Chrome49x64</Browser_api_name>
+  <Os_api_name>Mac10.11</Os_api_name>
+  <Screen_resolution>1920x1200</Screen_resolution>
+  <Record_video>true</Record_video>
+  <Record_network>false</Record_network>
+  <Username>cross.browser2@gmx.com</Username>
+  <Password>u35bce6361a6e6f3</Password>
+</Capabilities>

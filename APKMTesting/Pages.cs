@@ -14,8 +14,8 @@ namespace APKMFrame
 {
     public abstract class Pages
     {
-        public abstract string Address { get; }
-        public abstract string Title { get; }
+        protected abstract string Address { get; }
+        protected abstract string Title { get; }
 
         public virtual void GoTo()
         {
@@ -27,7 +27,7 @@ namespace APKMFrame
             return Driver.Instance.Title == this.Title;
         }
 
-        public virtual void WaitToLoad()
+        protected virtual void WaitToLoad()
         {
             IWait<IWebDriver> wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(30.00));
             wait.Until(d => d.FindElement(By.ClassName("amsBodyMaster")));

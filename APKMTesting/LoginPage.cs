@@ -25,9 +25,9 @@ namespace APKMFrame
         [FindsBy (How = How.Id, Using = "credentials")]
         public IWebElement CredentialsForm { get; set; }
 
-        public override string Address { get; } = "http://ams.authoritypartners.com/";
+        protected override string Address { get; } = "http://ams.authoritypartners.com/";
 
-        public override string Title { get; } = "Sign in to your account";
+        protected override string Title { get; } = "Sign in to your account";
 
         public LoginPage()
         {
@@ -36,7 +36,7 @@ namespace APKMFrame
 
         public void Login()
         {
-            var cd = GetCredentials.Get();
+            var cd = LoadFromXml.GetCredentials();
             UserId.SendKeys(cd[0]);
             Password.SendKeys(cd[1]);
             SignIn.Click();
