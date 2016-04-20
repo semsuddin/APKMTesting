@@ -7,6 +7,7 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.XPath;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.PageObjects;
 
 namespace APKMFrame
@@ -39,7 +40,6 @@ namespace APKMFrame
             var cd = LoadFromXml.GetCredentials();
             UserId.SendKeys(cd[0]);
             Password.SendKeys(cd[1]);
-            SignIn.Click();
             CredentialsForm.Submit();
             this.WaitToLoad();
         }

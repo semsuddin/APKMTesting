@@ -4,8 +4,10 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
@@ -29,6 +31,7 @@ namespace APKMFrame
 
         protected virtual void WaitToLoad()
         {
+            //Thread.Sleep(5000);
             IWait<IWebDriver> wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(30.00));
             wait.Until(d => d.FindElement(By.ClassName("amsBodyMaster")));
         }
